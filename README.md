@@ -8,7 +8,7 @@ JSON Web Token (JWT) is a low overhead option for authentication that is easy to
 
 In this course, we will build a simple authentication server that will act as a token issuer, and we will use those tokens to access resources on an API. Starting from scratch, you will learn how easy token based authentication can be and will understand how to use them on your APIs as well as on the front end of your web applications.
 
-# Start API/AUTH server
+## Start API/AUTH server
 
 ```shell
 cd server
@@ -21,7 +21,7 @@ API Server listening on PORT 3000
 Server listening on PORT 4000
 ```
 
-# Start Front End
+## Start Front End
 ```shell
 cd front
 npm start
