@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors')
 const jwt = require('jsonwebtoken')
 
 const PORT = process.env.PORT || 8888;
@@ -12,6 +13,7 @@ const users = [
 const app = express();
 
 app.use(bodyParser.json());
+app.use(cors());
 
 app.get("/status", (req, res) => {
   const localTime = (new Date()).toLocaleTimeString();
