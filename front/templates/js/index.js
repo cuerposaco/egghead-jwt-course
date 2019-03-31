@@ -1,5 +1,5 @@
 const API_URL = "http://localhost:3000";
-const AUTH_URL = API_URL; // "http://localhost:3000";
+const AUTH_URL = "http://localhost:4000";
 
 let ACCESS_TOKEN = undefined;
 
@@ -10,6 +10,7 @@ const logoutBtn = document.querySelector("#logoutBtn");
 
 headlineBtn.addEventListener("click", () => {
   fetch(`${API_URL}/resource`).then(resp => {
+    UIUpdate.updateCat(resp.status);
     return resp.text() ;
   }).then(data => {
     UIUpdate.alertBox(data);

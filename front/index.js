@@ -4,6 +4,8 @@ const bodyParser = require("body-parser")
 const app = express()
 const PORT = process.env.PORT || 4321
 
+app.use(express.static(`${__dirname}/templates`))
+
 app.get("/", (req, res) => {
   res
     .status(200)

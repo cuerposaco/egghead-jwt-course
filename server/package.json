@@ -4,7 +4,9 @@
   "description": "https://egghead.io/lessons/express-setup-a-web-server-in-node-js-using-express",
   "main": "index.js",
   "scripts": {
-    "start": "API_PORT=3000 nodemon index.js",
+    "start": "npm run start:api-server & npm run start:auth-server",
+    "start:api-server": "API_PORT=3000 nodemon api.js",
+    "start:auth-server": "AUTH_PORT=4000 nodemon auth.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
